@@ -6,10 +6,7 @@
 
 
             <v-toolbar-title>
-                <v-img
-                src="/logo.svg"
-                width="80px"
-                ></v-img>
+                <v-img  src="/logo.svg" width="80px" ></v-img>
             </v-toolbar-title>
 
             <v-spacer></v-spacer>
@@ -49,11 +46,15 @@
 
         </v-navigation-drawer>
         <!-- Nav bar -->
+
+        
     </div>
 </template>
 
 <script>
 export default {
+    props: ['theme'],
+
     data() {
         return {
             drawer: false,
