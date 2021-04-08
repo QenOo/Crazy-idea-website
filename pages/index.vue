@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- <h1>{{ $t('home') }}</h1> -->
+        <h1>{{ $t('home') }}</h1>
 
     </div>
 </template>
@@ -11,7 +11,7 @@ export default {
     data: () => ({}),
     head() {
         return {
-            // title: this.$t('home')
+            title: this.$t('home')
         }
     }
 };
