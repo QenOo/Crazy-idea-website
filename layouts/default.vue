@@ -19,6 +19,7 @@
         <!-- ?== my content -->
 
         <!-- ?== App Setting -->
+        <!-- <app-setting /> -->
         <app-setting />
         <!-- ?== App Setting -->
     </v-app>
@@ -26,10 +27,13 @@
 
 <script>
 import appSetting from "../components/app-setting.vue";
+import BtnAppSetting from '../components/btn-app-setting.vue';
 export default {
-    components: { appSetting },
+    components: { appSetting, BtnAppSetting },
     data() {
-        return {};
+        return {
+            myTheme: false
+        };
     },
     head() {
         return {
@@ -44,8 +48,11 @@ export default {
 
         if ( this.$i18n.locale == "ar") {
             this.$vuetify.rtl = true;
+            this.myTheme = true
         } else {
             this.$vuetify.rtl = false;
+            this.myTheme = false
+
         }
 
 
@@ -64,4 +71,7 @@ export default {
 
 
 <style>
+.v-toolbar {
+    transition: none;
+}
 </style>
