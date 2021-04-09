@@ -27,9 +27,8 @@
 
 <script>
 import appSetting from "../components/app-setting.vue";
-import BtnAppSetting from '../components/btn-app-setting.vue';
 export default {
-    components: { appSetting, BtnAppSetting },
+    components: { appSetting },
     data() {
         return {
             myTheme: false
