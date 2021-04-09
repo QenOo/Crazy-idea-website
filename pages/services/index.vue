@@ -5,17 +5,22 @@
 
                 <v-col v-if="$i18n.locale == 'ar'" lg="6" md="6" sm="12">
 
-                    <h3 class="title">{{item.title_ar}}</h3>
+                    <h3 class="title heading--text">{{item.title_ar}}</h3>
                     <p>
                         {{item.description_ar}}
                     </p>
+
+                    <v-btn class="myBtn" v-ripple="{ center: true }">
+                        
+                        test
+                    </v-btn>
 
                 </v-col>
 
 
                 <v-col v-if="$i18n.locale == 'en'" lg="6" md="6" sm="12">
 
-                    <h3 class="title">{{item.title_en}}</h3>
+                    <h3 class="title heading--text">{{item.title_en}}</h3>
                     <p>
                         {{item.description_en}}
                     </p>
@@ -25,7 +30,7 @@
 
                 <v-col v-if="$i18n.locale == 'fr'" lg="6" md="6" sm="12">
 
-                    <h3 class="title">{{item.title_fr}}</h3>
+                    <h3 class="title heading--text">{{item.title_fr}}</h3>
                     <p>
                         {{item.description_fr}}
                     </p>
@@ -57,7 +62,6 @@ export default {
         async fetchSomething() {
             const res = await this.$axios.$get('http://127.0.0.1:8000/api/module/services')
             this.res = res.payload.data;
-            console.log(this.lang)
         }
     }
 }
@@ -66,7 +70,28 @@ export default {
 <style scoped>
 .title {
     font-weight: bold;
-    font-size: 46px;
+    font-size: 36px !important;
     margin-bottom: 25px;
+}
+
+p {
+    line-height: 1.6;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.myBtn {
+    display: inline-block;
+    width: 18%;
+    height: 41px;
+    border-radius: 8px;
+    margin-right: 4%;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    background-image: linear-gradient(to right, #428EF3, #1542D3);
+    color: #ffffff;
+    font-family: semi;
+    padding-top: 9px;
+    font-size: 15px;
 }
 </style>

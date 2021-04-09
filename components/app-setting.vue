@@ -74,7 +74,7 @@ export default {
         toggle_dark_mode () {
             this.checked = !this.checked
             this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-            localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+            localStorage.setItem("dark_theme", this.$vuetify.theme.dark);
         }
     },
 };
