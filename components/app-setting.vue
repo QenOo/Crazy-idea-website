@@ -19,6 +19,12 @@
                 </v-btn>
             </template>
 
+            <v-btn @click.stop="toggle_dark_mode" fab dark large icon color="yellow" >
+                
+                <input :class="{ checked: checked }" class="toggle btn-dark-mod" type="checkbox">
+                
+            </v-btn>
+
             <v-btn @click.prevent.stop="changlang('ar')" fab icon large color="yellow">
                 <v-img max-width="30px" src="/flagLang/egypt.svg"></v-img>
             </v-btn>
@@ -29,12 +35,6 @@
 
             <v-btn @click.prevent.stop="changlang('fr')" fab icon large color="blue">
                 <v-img max-width="30px" src="/flagLang/france.svg"></v-img>
-            </v-btn>
-
-            <v-btn @click.stop="toggle_dark_mode" fab dark large icon color="yellow" >
-                
-                <input :class="{ checked: checked }" class="toggle btn-dark-mod" type="checkbox">
-                
             </v-btn>
 
         </v-speed-dial>
