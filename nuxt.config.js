@@ -17,7 +17,9 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/logo.svg' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.svg' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500;800&display=swap' }
     ]
   },
 
@@ -68,21 +70,8 @@ export default {
     lazy: true,
     langDir: 'static/locale/',
     defaultLocale: 'en',
-    // strategy: 'no-prefix',
     vueI18n: {
       fallbackLocale: 'en',
-      // messages: {
-      //   en: {
-      //     welcome: 'Welcome'
-      //   },
-      //   fr: {
-      //     welcome: 'Bienvenue'
-      //   },
-      //   ar: {
-      //     welcome: 'مرحبا كريزي'
-      //   }
-      // }
-      
     }
   },
 
@@ -100,9 +89,17 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
-        }
+        },
+        // light: {
+        //   primary: colors.purple,
+        //   secondary: colors.grey.darken1,
+        //   accent: colors.shades.black,
+        //   error: colors.red.accent3,
+        //   background: colors.indigo.lighten5
+        // },
       }
-    }
+    },
+    
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

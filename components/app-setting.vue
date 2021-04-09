@@ -1,5 +1,5 @@
 <template>
-    <v-card id="create">
+    <v-card class="appSetting" >
         <v-speed-dial
             v-model="fab"
             :top="top"
@@ -81,13 +81,18 @@ export default {
 </script>
 
 <style scoped>
-#create .v-speed-dial {
+.appSetting {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.appSetting .v-speed-dial {
     position: absolute;
     bottom: 50px;
 }
 
-#create .v-btn--floating {
-    position: relative;
+.appSetting .v-btn--floating {
+    position: fixed;
 }
 
 

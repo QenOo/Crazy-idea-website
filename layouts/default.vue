@@ -1,5 +1,5 @@
 <template>
-    <v-app dark>
+    <v-app dark >
         <!-- ?== My Navbar -->
         <app-navbar />
         <!-- ?== My Navbar -->
@@ -19,7 +19,6 @@
         <!-- ?== my content -->
 
         <!-- ?== App Setting -->
-        <!-- <app-setting /> -->
         <app-setting />
         <!-- ?== App Setting -->
     </v-app>
@@ -64,13 +63,18 @@ export default {
                 this.$vuetify.theme.dark = false;
             }
         }
+        
     }
 };
 </script>
 
 
 <style>
-.v-toolbar {
-    transition: none;
+/* * {
+    transition: all ease-in-out .2s;
+} */
+
+[lang="ar"] .v-application {
+    font-family: 'Tajawal', sans-serif !important;
 }
 </style>

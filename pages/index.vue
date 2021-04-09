@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>{{ $t('home') }}</h1>
-        <input id="toggle" class="toggle" type="checkbox">
+        
     </div>
 </template>
 
