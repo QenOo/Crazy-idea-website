@@ -19,8 +19,12 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/logo.svg' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500;800&display=swap' }
-    ]
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500;800&display=swap' },
+      // { rel: 'stylesheet', href: '/main.css' }
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js' }
+  ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

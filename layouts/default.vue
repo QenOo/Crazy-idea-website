@@ -6,16 +6,14 @@
 
         <!-- ?==  content -->
         <v-main>
+            <nuxt />
             <v-container>
-                <nuxt />
             </v-container>
         </v-main>
         <!-- ?==  content -->
 
         <!-- ?== my content -->
-        <v-footer app>
-            <span>&copy; {{ new Date().getFullYear() }}</span>
-        </v-footer>
+        <app-footer />
         <!-- ?== my content -->
 
         <!-- ?== App Setting -->
@@ -28,10 +26,11 @@
 import appSetting from "../components/app-setting.vue";
 import Vuetify from 'vuetify'
 import colors from 'vuetify/es5/util/colors'
+import AppFooter from '../components/app-footer.vue';
 
 
 export default {
-    components: { appSetting },
+    components: { appSetting, AppFooter },
     data() {
         return {};
     },
@@ -104,4 +103,28 @@ body  {
 [lang="ar"] .v-application {
     font-family: 'Tajawal', sans-serif !important;
 }
+
+
+/*start head-section-page */
+.head-section-page {
+    background-image: url('/header/bkCover.svg');
+    background-size: cover;
+    background-position: bottom;
+    min-height: calc(100vh - 100px);
+    margin-bottom: 40px;
+}
+
+.head-section-page img {
+    width: 95%;
+    height: 95%;
+    margin-top: 80px;
+}
+
+.head-section-page h2 {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+/*end head-section-page */
 </style>

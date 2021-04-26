@@ -7,5 +7,8 @@ export default {
     projects: 'مشاريعنا',
     works: 'اعمالنا',
     blog: 'المدونة',
-    contactUs: 'تواصل معنا'
+    contactUs: 'تواصل معنا',
+    orderNow: 'اطلب الان',
+    getStarted: 'تواصل معنا',
+    downloadPortofilio: 'تحميل البروفايل'
 }

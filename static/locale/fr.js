@@ -7,5 +7,8 @@ export default {
     projects: 'Projects',
     works: 'nos oeuvres',
     blog: 'les blogs',
-    contactUs: 'Nous contacter'
+    contactUs: 'Nous contacter',
+    orderNow: 'france',
+    getStarted: 'Get Started',
+    downloadPortofilio: 'Download Portofilio'
 }

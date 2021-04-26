@@ -1,7 +1,24 @@
 <template>
     <div class="services">
+
+        <!--start head-section-page -->
+        <div class="head-section-page">
+            <v-container>
+                <v-row class="d-flex align-center">
+                    <v-col lg="6" md="6" sm="12">
+                        <img src="/pagesImages/services.svg">
+                    </v-col>
+                    <v-col lg="6" md="6" sm="12">
+                        <h2>{{$t('services')}}</h2>
+                    </v-col>
+                </v-row>
+            </v-container>
+
+        </div>
+        <!--end head-section-page -->
+
         <v-container>
-            <v-row v-for="item in this.res" :key="item.id">
+            <v-row v-for="item in this.res" :key="item.id" class="d-flex align-center my-16">
 
                 <v-col v-if="$i18n.locale == 'ar'" lg="6" md="6" sm="12">
 
@@ -10,9 +27,8 @@
                         {{item.description_ar}}
                     </p>
 
-                    <v-btn class="myBtn" v-ripple="{ center: true }">
-                        
-                        test
+                    <v-btn class="myBtn" v-ripple="{ center: true }" large>
+                        {{$t('orderNow')}}
                     </v-btn>
 
                 </v-col>
@@ -25,6 +41,10 @@
                         {{item.description_en}}
                     </p>
 
+                    <v-btn class="myBtn" v-ripple="{ center: true }" large>
+                        {{$t('orderNow')}}
+                    </v-btn>
+
                 </v-col>
 
 
@@ -35,10 +55,14 @@
                         {{item.description_fr}}
                     </p>
 
+                    <v-btn class="myBtn" v-ripple="{ center: true }" large>
+                        {{$t('orderNow')}}
+                    </v-btn>
+
                 </v-col>
 
-                <v-col lg="6" md="6" sm="12">
-                    <v-img :src="'http://127.0.0.1:8000/storage/'+item.image" max-height="100%" max-width="100%"></v-img>
+                <v-col lg="6" md="6" sm="12" class="d-flex justify-md-end justify-center">
+                    <v-img :src="'http://127.0.0.1:8000/storage/'+item.image" max-height="100%" max-width="80%"></v-img>
                 </v-col>
             </v-row>
         </v-container>
@@ -77,20 +101,12 @@ export default {
 p {
     line-height: 1.6;
     display: inline-block;
-    font-size: 14px;
+    font-size: 18px !important;
 }
 
 .myBtn {
-    display: inline-block;
-    width: 18%;
-    height: 41px;
-    border-radius: 8px;
-    margin-right: 4%;
-    margin-top: 15px;
-    margin-bottom: 25px;
     background-image: linear-gradient(to right, #428EF3, #1542D3);
     color: #ffffff;
-    font-family: semi;
     padding-top: 9px;
     font-size: 15px;
 }
