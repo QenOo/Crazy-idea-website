@@ -126,5 +126,8 @@ body  {
     text-align: center;
 }
 
+ul {
+    list-style-type: none;
+}
 /*end head-section-page */
 </style>

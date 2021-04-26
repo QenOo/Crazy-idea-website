@@ -53,7 +53,6 @@
 
 <script>
 export default {
-    props: ['theme'],
 
     data() {
         return {
