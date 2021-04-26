@@ -5,10 +5,10 @@
         <div class="head-section-page">
             <v-container>
                 <v-row class="d-flex align-center">
-                    <v-col lg="6" md="6" sm="12">
+                    <v-col cols="12" lg="6" md="6" sm="6" xm="12">
                         <img src="/pagesImages/services.svg">
                     </v-col>
-                    <v-col lg="6" md="6" sm="12">
+                    <v-col cols="12" lg="6" md="6" sm="6" xm="12">
                         <h2>{{$t('services')}}</h2>
                     </v-col>
                 </v-row>

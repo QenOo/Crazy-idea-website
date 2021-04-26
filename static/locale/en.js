@@ -10,5 +10,16 @@ export default {
     contactUs: 'Contact Us',
     orderNow: 'Order Now',
     getStarted: 'Get Started',
-    downloadPortofilio: 'Download Portofilio'
+    downloadPortofilio: 'Download Portofilio',
+    allRights: 'All rights reserved for crazy idea 2020 ©',
+    madeWith : '',
+    thinkOut: 'Think Out Of The Box',
+    usefulLinks: 'Useful links',
+    information: 'Information',
+    contacts: 'Contacts',
+    helpSupport: 'Help & Support',
+    pravicyPolicy: 'Pravicy & Policy',
+    pricing: 'Pricing',
+    terms: 'Terms',
+    condition: 'Condition'
 }

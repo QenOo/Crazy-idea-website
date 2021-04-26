@@ -5,29 +5,29 @@
             <!--start foter-->
             <div class="foter">
                 <v-row class="d-flex align-center">
-                    <v-col cols="12" lg="3" md="6" sm="12" xs="12">
+                    <v-col cols="12" lg="3" md="6" sm="6" xs="12">
                         <img src="/logow.svg">
                     </v-col>
-                    <v-col cols="12" lg="3" md="6" sm="12" xs="12">
-                        <h4>Useful links</h4>
+                    <v-col cols="12" lg="3" md="6" sm="6" xs="12">
+                        <h4>{{$t('usefulLinks')}}</h4>
                         <ul v-for="item in menuItems" :key="item.index">
                             <li>
                                 <nuxt-link :to="item.path">{{ $t(`${item.title}`)  }}</nuxt-link>
                             </li>
                         </ul>
                     </v-col>
-                    <v-col cols="12" lg="3" md="6" sm="12" xs="12">
-                        <h4>Information</h4>
+                    <v-col cols="12" lg="3" md="6" sm="6" xs="12">
+                        <h4>{{$t('information')}}</h4>
                         <ul>
-                            <li><a href="#">Help & Support</a></li>
-                            <li><a href="#">Pravicy & Policy</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Condition</a></li>
+                            <li><a href="#">{{$t('helpSupport')}}</a></li>
+                            <li><a href="#">{{$t('pravicyPolicy')}}</a></li>
+                            <li><a href="#">{{$t('pricing')}}</a></li>
+                            <li><a href="#">{{$t('terms')}}</a></li>
+                            <li><a href="#">{{$t('condition')}}</a></li>
                         </ul>
                     </v-col>
-                    <v-col cols="12" lg="3" md="6" sm="12" xs="12">
-                        <h4>Contacts</h4>
+                    <v-col cols="12" lg="3" md="6" sm="6" xs="12">
+                        <h4>{{$t('contacts')}}</h4>
                         <ul>
                             <li><a href="#">Someone@Gmail.Com</a></li>
                             <li><a href="#">+2055254545155</a></li>
@@ -43,10 +43,10 @@
 
             <footer class="d-flex justify-space-between">
                 
-                <h5>All rights reserved for crazy idea 2020 ©</h5>
+                <h5>{{$t('allRights')}}</h5>
                 <div class="crazy">
                     <h6>Made with <img src="/red.svg"> by Crazy Idea</h6>
-                    <p class="text-right">Think Out Of The Box</p>
+                    <p class="text-right">{{$t('thinkOut')}}</p>
                 </div>
             </footer>
         </v-container>
@@ -61,8 +61,6 @@ export default {
             drawer: false,
             group: null,
             menuItems: [
-                {title: 'home', path: '/', icon: 'mdi-home'},
-                {title: 'aboutUs', path: 'about-us', icon: 'mdi-shield-account'},
                 {title: 'services', path: 'services', icon: 'mdi-face-agent'},
                 {title: 'projects', path: 'projects', icon: 'mdi-account-group'},
                 {title: 'works', path: 'works', icon: 'mdi-briefcase'},
