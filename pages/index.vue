@@ -14,8 +14,8 @@
                 <v-container>
                     <div class="mttt">
 
-                        <v-row v-for="item in this.res" :key="item.id" class="d-flex align-center">
-                            <v-col cols="12" lg="6" md="6" sm="6" xm="12">
+                        <v-row v-for="item in this.res" :key="item.id" class="d-flex align-center d-xs-none">
+                            <v-col cols="12" lg="6" md="6" sm="12" xm="12" class="vedoc">
 
                                 <div class="vedo">
                                     <video poster="https://crazyideaco.com/wp-content/themes/crazy/images/crazy_poster.png" style="width: 100%;height: 100%;background: white;position:relative; border-radius: 50px 0 0 0;border:none;outline:none;z-index: 5;" autoplay="" muted="">
@@ -25,7 +25,7 @@
 
                             </v-col>
 
-                            <v-col cols="12" lg="6" md="6" sm="6" xm="12">
+                            <v-col cols="12" lg="6" md="6" sm="12" xm="12">
 
                                 <div v-if="$i18n.locale == 'ar'" class="main-content">
 
@@ -36,13 +36,6 @@
                                     </h4>
 
                                     <p>{{item.description_ar}}</p>
-
-                                    <div class="row">
-                                        <v-btn large color="white blue--text"> {{$t('getStarted')}} </v-btn>
-                                        <v-btn large class="mx-2" outlined color="white">
-                                            {{$t('downloadPortofilio')}}
-                                        </v-btn>
-                                    </div>
 
                                 </div>
 
@@ -56,13 +49,6 @@
 
                                     <p>{{item.description_en}}</p>
 
-                                    <div class="row">
-                                        <v-btn large color="white blue--text"> {{$t('getStarted')}} </v-btn>
-                                        <v-btn large class="mx-2" outlined color="white">
-                                            {{$t('downloadPortofilio')}}
-                                        </v-btn>
-                                    </div>
-
                                 </div>
 
                                 <div v-if="$i18n.locale == 'fr'" class="main-content">
@@ -75,13 +61,15 @@
 
                                     <p>{{item.description_fr}}</p>
 
-                                    <div class="row">
-                                        <v-btn large color="white blue--text"> {{$t('getStarted')}} </v-btn>
-                                        <v-btn large class="mx-2" outlined color="white">
-                                            {{$t('downloadPortofilio')}}
-                                        </v-btn>
-                                    </div>
 
+                                </div>
+
+
+                                <div class="row">
+                                    <v-btn class="my-2" large color="white blue--text"> {{$t('getStarted')}} </v-btn>
+                                    <v-btn large class="mx-2 my-2" outlined color="white">
+                                        {{$t('downloadPortofilio')}}
+                                    </v-btn>
                                 </div>
 
                             </v-col>
@@ -206,7 +194,7 @@ export default {
     width: 80%;
 }
 
-[lang="ar"] .vedo::before {
+/* [lang="ar"] .vedo::before {
     top: -28px;
     left: -32px;
 }
@@ -214,7 +202,7 @@ export default {
 [lang="ar"] .vedo::after {
     bottom: -25px;
     right: -44px;
-}
+} */
 
 .vedo #frme {
     width: 115%;
@@ -260,7 +248,43 @@ export default {
     border-radius: 0px 20px 0px 20px;
 }
 
+/* Extra small devices */
 
+@media (max-width: 960px) {
+    .mttt {
+        margin: 0;
+    }
+    .vedo {
+        margin: 20px 20px 0;
+        height: 250px;
+        width: 90%;
+    }
+    .main-content p {
+        width: 80%;
+        margin-top: 15px;
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+    .main-content h4 {
+        font-size: 22px;
+    }
+}
 
+@media (max-width: 300px) {
+    .vedo,
+    .vedoc {
+        display: none;
+    }
+    .main-content p {
+        width: 100% !important;
+        margin-top: -1px;
+        font-size: 15px;
+        margin-bottom: 7px;
+    }
+}
+
+.row {
+    margin: 0;
+}
 
 </style>
