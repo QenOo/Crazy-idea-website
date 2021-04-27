@@ -66,8 +66,8 @@
 
 
                                 <div class="row">
-                                    <v-btn class="my-2" large color="white blue--text"> {{$t('getStarted')}} </v-btn>
-                                    <v-btn large class="mx-2 my-2" outlined color="white">
+                                    <v-btn class="my-2" large color="white blue--text" :href="`https://api.whatsapp.com/send?phone=2${item.contact_us}`" target="_blank"> {{$t('getStarted')}} </v-btn>
+                                    <v-btn large class="mx-2 my-2" outlined color="white" :href="item.download" target="_blank">
                                         {{$t('downloadPortofilio')}}
                                     </v-btn>
                                 </div>
@@ -101,9 +101,9 @@ export default {
     },
     methods: {
         async fetchSomething() {
-            const res = await this.$axios.$get('http://127.0.0.1:8000/api/module/slider')
+            let url = process.env.moduleUrl + 'slider';
+            const res = await this.$axios.$get(url);
             this.res = res.payload.data;
-            console.log(this.res)
         }
     }
 };

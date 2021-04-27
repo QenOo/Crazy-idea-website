@@ -5,6 +5,12 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://127.0.0.1:8000',
+    moduleUrl: process.env.MODULE_URL || 'http://127.0.0.1:8000/api/module/',
+    imageUrl: process.env.IMAGE_URL || 'http://127.0.0.1:8000/storage/'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'front-end',
@@ -42,6 +48,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/dotenv'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
