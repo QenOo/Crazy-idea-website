@@ -12,21 +12,20 @@
             </ul>
             <div class="overlay-head">
                 <v-container>
-                    <div class="adver">
-                        <div v-for="item in this.res" :key="item.id" class="row">
+                    <div class="mttt">
 
-                            <div class="col-md-6 col-12">
-
-                                <!-- <img src="images/Group 2696.svg" id="ani1"> -->
+                        <v-row v-for="item in this.res" :key="item.id" class="d-flex align-center">
+                            <v-col cols="12" lg="6" md="6" sm="6" xm="12">
 
                                 <div class="vedo">
                                     <video poster="https://crazyideaco.com/wp-content/themes/crazy/images/crazy_poster.png" style="width: 100%;height: 100%;background: white;position:relative; border-radius: 50px 0 0 0;border:none;outline:none;z-index: 5;" autoplay="" muted="">
                                         <source src="https://crazyideaco.com/wp-content/themes/crazy/video/vid.mp4">
                                     </video>
                                 </div>
-                            </div>
 
-                            <div class="col-md-6 col-12">
+                            </v-col>
+
+                            <v-col cols="12" lg="6" md="6" sm="6" xm="12">
 
                                 <div v-if="$i18n.locale == 'ar'" class="main-content">
 
@@ -47,8 +46,6 @@
 
                                 </div>
 
-
-
                                 <div v-if="$i18n.locale == 'en'" class="main-content">
 
 
@@ -67,8 +64,6 @@
                                     </div>
 
                                 </div>
-
-
 
                                 <div v-if="$i18n.locale == 'fr'" class="main-content">
 
@@ -89,10 +84,9 @@
 
                                 </div>
 
-                            
+                            </v-col>
+                        </v-row>
 
-                            </div>
-                        </div>
                     </div>
                 </v-container>
             </div>
@@ -173,8 +167,6 @@ export default {
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 2.0px );
     -webkit-backdrop-filter: blur( 4.0px );
-    /* border-radius: 10px; */
-    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
     position: absolute;
     top: 0;
     left: 0;
@@ -202,7 +194,7 @@ export default {
 }
 
 
-.adver {
+.mttt {
     margin-top: 50px;
 }
 
