@@ -21,5 +21,6 @@ export default {
     pravicyPolicy: 'Pravicy & Policy',
     pricing: 'Pricing',
     terms: 'Terms',
-    condition: 'Condition'
+    condition: 'Condition',
+    clientsweworkfor: 'clientsweworkfor'
 }

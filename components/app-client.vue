@@ -1,7 +1,7 @@
 <template>
     <div class="clients">
 
-        <h5 class="text-sec-head text-center">Clients we work for</h5>
+        <h5 class="text-sec-head text-center">{{$t('clientsweworkfor')}}</h5>
         
         <v-sheet
             class="mx-auto"
@@ -52,7 +52,7 @@ export default {
 }
 
 .text-sec-head {
-    font-size: 40px;
-    margin: 50px 0 50px 0;
+    font-size: 33px;
+    margin: 50px 0 60px 0;
 }
 </style>

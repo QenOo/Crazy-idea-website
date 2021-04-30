@@ -21,5 +21,6 @@ export default {
     pravicyPolicy: 'السياسة & الخصوصية',
     pricing: 'الأسعار',
     terms: 'قوانين',
-    condition: 'شروط الاستخدام'
+    condition: 'شروط الاستخدام',
+    clientsweworkfor: 'عملاء نعمل من أجلهم'
 }
