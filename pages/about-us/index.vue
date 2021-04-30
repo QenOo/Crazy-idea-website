@@ -38,7 +38,7 @@
 
                         <div v-if="$i18n.locale == 'ar'" class="main-content about-company">
 
-                            <h5>
+                            <h5 class="headingtow--text">
                                 {{item.title_ar}}
                             </h5>
 
@@ -53,7 +53,7 @@
 
                         <div v-if="$i18n.locale == 'en'" class="main-content about-company">
 
-                            <h5>
+                            <h5 class="headingtow--text">
                                 {{item.title_en}}
                             </h5>
 
@@ -65,7 +65,7 @@
 
                         <div v-if="$i18n.locale == 'fr'" class="main-content about-company">
 
-                            <h5>
+                            <h5 class="headingtow--text">
                                 {{item.title_fr}}
                             </h5>
 
@@ -248,7 +248,6 @@ export default {
 
 
 .about-company h5 {
-    color: #0861D4;
     font-size: 29px;
     margin-bottom: 21px;
     padding-top: 45px;

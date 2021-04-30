@@ -1,6 +1,14 @@
 <template>
     <div class="teams mt-12">
 
+        <div class="heading-section text-center">
+                <p> <span class="textinfo--text">|</span> Our Specialist</p>
+                <h4>Our Seccessful Team</h4>
+                <p>
+                    We have a team of specialists in the fields of design, e-marketing and programming, not just enabling, but a scoop based on knowledge
+                </p>
+        </div>
+
         <v-sheet class="mx-auto" max-width="1200" >
             <v-slide-group v-model="model" class="pa-4" center-active show-arrows >
                 <v-slide-item v-for="item in this.res" :key="item.id" v-slot="{ active, toggle }" >
