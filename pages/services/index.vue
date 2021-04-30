@@ -20,7 +20,7 @@
         <v-container>
             <v-row v-for="item in this.res" :key="item.id" class="d-flex align-center my-16">
 
-                <v-col v-if="$i18n.locale == 'ar'" lg="6" md="6" sm="12">
+                <v-col v-if="$i18n.locale == 'ar'" lg="6" md="6" sm="12" class="text-md-right text-center">
 
                     <h3 class="title heading--text">{{item.title_ar}}</h3>
                     <p>
@@ -34,7 +34,7 @@
                 </v-col>
 
 
-                <v-col v-if="$i18n.locale == 'en'" lg="6" md="6" sm="12">
+                <v-col v-if="$i18n.locale == 'en'" lg="6" md="6" sm="12" class="text-md-left text-center">
 
                     <h3 class="title heading--text">{{item.title_en}}</h3>
                     <p>
@@ -48,7 +48,7 @@
                 </v-col>
 
 
-                <v-col v-if="$i18n.locale == 'fr'" lg="6" md="6" sm="12">
+                <v-col v-if="$i18n.locale == 'fr'" lg="6" md="6" sm="12" class="text-md-left text-center">
 
                     <h3 class="title heading--text">{{item.title_fr}}</h3>
                     <p>
@@ -110,4 +110,11 @@ p {
     padding-top: 9px;
     font-size: 15px;
 }
+
+/* @media (max-width: 960px) {
+    .myBtn {
+        display: block;
+        margin: 0 auto;
+    }
+} */
 </style>
