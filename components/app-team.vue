@@ -12,16 +12,18 @@
                         >
 
                         
-                            <div v-if="!active" class="user">
-                                <img :src="$images(item.image)" />
-                                <div class="user-info">
-                                    <h4 class="heading--text">{{item.name}}</h4>
-                                    <p class="secondary--text">{{item.job_title}}</p>
-                                </div>
-                            </div>
+                            
+                            
+                            <img v-if="!active" width="100%" height="100%" :src="$images(item.description, 'medium')" />
                             
                             <v-scale-transition>
-                                <img v-if="active" width="100%" height="100%" :src="$images(item.description, 'medium')" />
+                                <div v-if="active" class="user">
+                                    <img :src="$images(item.image, 'small')" />
+                                    <div class="user-info">
+                                        <h4 class="heading--text">{{item.name}}</h4>
+                                        <p class="secondary--text">{{item.job_title}}</p>
+                                    </div>
+                                </div>
                             </v-scale-transition>
                         </v-row>
                     </v-card>
@@ -57,13 +59,14 @@
     text-align: center;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .user img {
     width: 100%;
-}
-
-.user-info {
-    margin-top: 20px;
+    height: 80%;
 }
 
 .user-info h4 {
