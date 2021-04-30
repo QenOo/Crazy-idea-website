@@ -18,80 +18,85 @@
         <!--end head-section-page -->
 
         <v-container>
-                    <div class="mttt">
+            <div class="mttt">
 
-                        <v-row v-for="item in this.res" :key="item.id" class="d-flex align-center d-xs-none">
-                            <v-col cols="12" lg="6" md="6" sm="12" xm="12" class="vedoc">
+                <v-row v-for="item in this.res" :key="item.id" class="d-flex align-center d-xs-none">
+                    <v-col cols="12" lg="6" md="6" sm="12" xm="12" class="vedoc">
 
-                                <div class="vedo">
-                                    <video poster="https://crazyideaco.com/wp-content/themes/crazy/images/crazy_poster.png" style="width: 100%;height: 100%;background: white;position:relative; border-radius: 50px 0 0 0;border:none;outline:none;z-index: 5;" autoplay="" muted="">
-                                        <source src="https://crazyideaco.com/wp-content/themes/crazy/video/vid.mp4">
-                                    </video>
-                                </div>
+                        <div class="vedo">
+                            <video poster="https://crazyideaco.com/wp-content/themes/crazy/images/crazy_poster.png" style="width: 100%;height: 100%;background: white;position:relative; border-radius: 50px 0 0 0;border:none;outline:none;z-index: 5;" autoplay="" muted="">
+                                <source src="https://crazyideaco.com/wp-content/themes/crazy/video/vid.mp4">
+                            </video>
+                        </div>
 
-                            </v-col>
+                    </v-col>
 
-                            <v-col cols="12" lg="6" md="6" sm="12" xm="12">
-
-
-
-
-                                <div v-if="$i18n.locale == 'ar'" class="main-content about-company">
-
-                                    <h5>
-                                        {{item.title_ar}}
-                                    </h5>
-
-                                    <p>
-                                        {{item.conent_ar}}
-                                    </p>
-
-                                </div>
+                    <v-col cols="12" lg="6" md="6" sm="12" xm="12">
 
 
 
 
-                                <div v-if="$i18n.locale == 'en'" class="main-content about-company">
+                        <div v-if="$i18n.locale == 'ar'" class="main-content about-company">
 
-                                    <h5>
-                                        {{item.title_en}}
-                                    </h5>
+                            <h5>
+                                {{item.title_ar}}
+                            </h5>
 
-                                    <p>
-                                        {{item.conent_en}}
-                                    </p>
+                            <p>
+                                {{item.conent_ar}}
+                            </p>
 
-                                </div>
-
-                                <div v-if="$i18n.locale == 'fr'" class="main-content about-company">
-
-                                    <h5>
-                                        {{item.title_fr}}
-                                    </h5>
-
-                                    <p>
-                                        {{item.conent_fr}}
-                                    </p>
-
-                                </div>
+                        </div>
 
 
-                                <div class="row">
-                                    <v-btn class="my-2" large color="white blue--text" :href="`https://api.whatsapp.com/send?phone=2${item.contact_us}`" target="_blank"> {{$t('getStarted')}} </v-btn>
-                                </div>
 
-                            </v-col>
-                        </v-row>
 
-                    </div>
-                </v-container>
+                        <div v-if="$i18n.locale == 'en'" class="main-content about-company">
+
+                            <h5>
+                                {{item.title_en}}
+                            </h5>
+
+                            <p>
+                                {{item.conent_en}}
+                            </p>
+
+                        </div>
+
+                        <div v-if="$i18n.locale == 'fr'" class="main-content about-company">
+
+                            <h5>
+                                {{item.title_fr}}
+                            </h5>
+
+                            <p>
+                                {{item.conent_fr}}
+                            </p>
+
+                        </div>
+
+
+                        <div class="row">
+                            <v-btn class="my-2" large color="white blue--text" :href="`https://api.whatsapp.com/send?phone=2${item.contact_us}`" target="_blank"> {{$t('getStarted')}} </v-btn>
+                        </div>
+
+                    </v-col>
+                </v-row>
+
+            </div>
+        </v-container>
+
+
+        <app-team />
 
 
     </div>
 </template>
 
 <script>
+import appTeam from '../../components/app-team.vue';
 export default {
+  components: { appTeam },
     head() {
         return {
             title: this.$t('aboutUs')
@@ -108,7 +113,6 @@ export default {
             let url = process.env.moduleUrl + 'about';
             const res = await this.$axios.$get(url);
             this.res = res.payload.data;
-            console.log(this.res)
         }
     }
 }
