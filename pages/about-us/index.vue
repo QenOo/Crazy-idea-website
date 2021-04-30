@@ -77,7 +77,7 @@
 
 
                         <div class="row">
-                            <v-btn class="my-2" large color="white blue--text" :href="`https://api.whatsapp.com/send?phone=2${item.contact_us}`" target="_blank"> {{$t('getStarted')}} </v-btn>
+                            <v-btn class="my-2 myBtn" large :href="`https://api.whatsapp.com/send?phone=2${item.contact_us}`" target="_blank"> {{$t('getStarted')}} </v-btn>
                         </div>
 
                     </v-col>
@@ -87,16 +87,23 @@
         </v-container>
 
 
+        <!-- app-team -->
         <app-team />
+        <!-- app-team -->
 
+
+        <!-- app-clintes -->
+        <app-client />
+        <!-- app-clintes -->
 
     </div>
 </template>
 
 <script>
+import AppClient from '../../components/app-client.vue';
 import appTeam from '../../components/app-team.vue';
 export default {
-  components: { appTeam },
+  components: { appTeam, AppClient },
     head() {
         return {
             title: this.$t('aboutUs')
@@ -119,6 +126,8 @@ export default {
 </script>
 
 <style>
+
+
 
 
 .main-content h4 {
@@ -248,5 +257,12 @@ export default {
 
 .row {
     margin: 0;
+}
+
+.myBtn {
+    background-image: linear-gradient(to right, #428EF3, #1542D3);
+    color: #ffffff !important;
+    padding-top: 9px;
+    font-size: 15px;
 }
 </style>
