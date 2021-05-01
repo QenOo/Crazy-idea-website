@@ -22,5 +22,8 @@ export default {
     pricing: 'Pricing',
     terms: 'Terms',
     condition: 'Condition',
-    clientsweworkfor: 'Clients we work for'
+    clientsweworkfor: 'Clients we work for',
+    ourSpecialist: 'Our Specialist',
+    ourSeccessfulTeam: 'Our Successful Team',
+    desTeam: 'We have a team of specialists in the fields of design, e-marketing and programming, not just enabling, but a scoop based on knowledge'
 }

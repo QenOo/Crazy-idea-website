@@ -1,12 +1,12 @@
 <template>
-    <div class="teams mt-12">
+    <div class="teams py-16">
 
         <div class="heading-section text-center">
-                <p> <span class="textinfo--text">|</span> Our Specialist</p>
-                <h4>Our Seccessful Team</h4>
-                <p>
-                    We have a team of specialists in the fields of design, e-marketing and programming, not just enabling, but a scoop based on knowledge
-                </p>
+            <div class="textinfo--text"> <span>|</span> {{$t('ourSpecialist')}} </div>
+            <h4> {{$t('ourSeccessfulTeam')}} </h4>
+            <p class="des">
+                {{$t('desTeam')}}
+            </p>
         </div>
 
         <v-sheet class="mx-auto" max-width="1200" >
@@ -19,9 +19,6 @@
                             justify="center"
                         >
 
-                        
-                            
-                            
                             <img v-if="!active" width="100%" height="100%" :src="$images(item.description, 'medium')" />
                             
                             <v-scale-transition>
@@ -62,7 +59,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 .user {
     text-align: center;
     width: 100%;
@@ -80,4 +77,22 @@
 .user-info h4 {
     font-size: 20px;
 }
+
+.heading-section h4 {
+    margin-top: 2px;
+    line-height: 1.8;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+.heading-section .des {
+    color: #c3c3c3;
+    margin-bottom: 50px;
+    font-weight: 600;
+    width: 45%;
+    display: block;
+    margin: 0 auto 50px auto;
+}
+
+
 </style>

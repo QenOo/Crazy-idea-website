@@ -22,5 +22,8 @@ export default {
     pricing: 'الأسعار',
     terms: 'قوانين',
     condition: 'شروط الاستخدام',
-    clientsweworkfor: 'عملاء نعمل من أجلهم'
+    clientsweworkfor: 'عملاء نعمل من أجلهم',
+    ourSpecialist: 'متخصصين لدينا',
+    ourSeccessfulTeam: 'فريقنا الناجح',
+    desTeam: 'لدينا فريق من المتخصصين في مجالات التصميم والتسويق الإلكتروني والبرمجة'
 }

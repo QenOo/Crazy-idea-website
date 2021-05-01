@@ -1,16 +1,13 @@
 <template>
-    <div class="clients">
+    <div class="clients py-16">
 
         <h5 class="text-sec-head text-center">{{$t('clientsweworkfor')}}</h5>
         
         <v-sheet
-            class="mx-auto"
+            class="mx-auto pa-10"
             max-width="1200"
         >
-            <v-slide-group
-                show-arrows
-                v-model="model"
-                >
+            <v-slide-group show-arrows v-model="model" >
                 <v-slide-item
                     v-for="item in this.res"
                     :key="item.id"
@@ -55,4 +52,5 @@ export default {
     font-size: 33px;
     margin: 50px 0 60px 0;
 }
+
 </style>
