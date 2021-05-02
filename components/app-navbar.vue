@@ -60,12 +60,12 @@ export default {
             group: null,
             menuItems: [
                 {title: 'home', path: '/', icon: 'mdi-home'},
-                {title: 'aboutUs', path: 'about-us', icon: 'mdi-shield-account'},
-                {title: 'services', path: 'services', icon: 'mdi-face-agent'},
-                {title: 'projects', path: 'projects', icon: 'mdi-account-group'},
-                {title: 'works', path: 'works', icon: 'mdi-briefcase'},
-                {title: 'blog', path: 'blog', icon: 'mdi-shield-account'},
-                {title: 'contactUs', path: 'contact-us', icon: 'mdi-shield-account'},
+                {title: 'aboutUs', path: '/about-us', icon: 'mdi-shield-account'},
+                {title: 'services', path: '/services', icon: 'mdi-face-agent'},
+                {title: 'projects', path: '/projects', icon: 'mdi-account-group'},
+                {title: 'works', path: '/works', icon: 'mdi-briefcase'},
+                {title: 'blog', path: '/blog', icon: 'mdi-shield-account'},
+                {title: 'contactUs', path: '/contact-us', icon: 'mdi-shield-account'},
             ]
         };
     }
