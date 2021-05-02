@@ -80,7 +80,8 @@
                     </v-col>
 
                     <v-col cols="12" md="7">
-                        <v-form v-model="valid">
+                        <v-form v-model="valid" ref="form">
+
                             <v-container>
                                 <v-row>
 
@@ -96,7 +97,6 @@
 
 
                                     <v-col cols="12" md="6"> 
-
                                         <v-select
                                             v-model="select"
                                             :items="items"
@@ -104,7 +104,6 @@
                                             :label="$t('selectService')"
                                             required
                                         ></v-select>
-
                                     </v-col>
 
 
@@ -142,15 +141,14 @@
 
 
                                     <v-col cols="12"> 
-
                                         <v-checkbox
                                             v-model="checkbox"
                                             :rules="[v => !!v || this.$t('agreeToContinue')]"
                                             :label="$t('understandPrivacyPolicy')"
                                             required
                                         ></v-checkbox>
-
                                     </v-col>
+
                                     <v-col cols="12">
                                         
                                         <v-btn
@@ -163,80 +161,51 @@
                                         
                                     </v-col>
 
-
-                                        
-
-
-
-
-
                                 </v-row>
                             </v-container>
 
 
-                                    <!-- success alert -->
-        <div class="text-center">
+                            <!-- success alert -->
+                            <div class="text-center">
 
-            <v-snackbar
-                v-model="snackbar"
-                :timeout="timeout"
-                centered
-                top
-                elevation="24"
-            >
-                <h3 class="text-center">
-                    <span class="light-green--text accent-3 ">
-                    {{ $t('welcome') }}
-                    </span>
-                    <h2 class="white--text font-bolder py-4">
-                        {{this.value1}}
-                    </h2>
-                    <span class="light-green--text  accent-3">
-                        {{ $t('snackbar') }}
-                    </span>
-                </h3>
+                                <v-snackbar v-model="snackbar" :timeout="timeout" centered top elevation="24" >
+                                    <h3 class="text-center">
+                                        <span class="light-green--text accent-3 ">
+                                            {{ $t('welcome') }}
+                                        </span>
+                                        <h2 class="white--text font-bolder py-4">
+                                            {{this.value1}}
+                                        </h2>
+                                        <span class="light-green--text  accent-3">
+                                            {{ $t('snackbar') }}
+                                        </span>
+                                    </h3>
 
-                <template>
-                    <v-btn
-                        color="error"
-                        text
-                        @click.prevent="resetValidation"
-                        class="mx-auto d-block"
-                    >
-                    {{$t('close')}}
-                    </v-btn>
-                </template>
-            </v-snackbar>
-            
-        </div>
-        <!-- success alert -->
+                                    <template>
+                                        <v-btn color="error" text @click.prevent="resetValidation" class="mx-auto d-block" > {{$t('close')}} </v-btn>
+                                    </template>
+                                </v-snackbar>
+                                
+                            </div>
+                            <!-- success alert -->
 
 
-        <!-- un success alert -->
-        <div class="text-center">
+                            <!-- un success alert -->
+                            <div class="text-center">
 
-            <v-snackbar
-                v-model="snackbart"
-                :timeout="timeout"
-                >
-            
-                <div class="error--text">
-                    <h3>{{ $t('snackbart') }}</h3>
-                </div>
+                                <v-snackbar v-model="snackbart" :timeout="timeout" >
+                                
+                                    <div class="error--text">
+                                        <h3>{{ $t('snackbart') }}</h3>
+                                    </div>
+                                    <template>
+                                        <v-btn color="danger" text @click="snackbart = false" > {{$t('close')}} </v-btn>
+                                    </template>
 
-                <template>
-                    <v-btn
-                    color="danger"
-                    text
-                    @click="snackbart = false"
-                    >
-                    {{$t('close')}}
-                    </v-btn>
-                </template>
-            </v-snackbar>
-            
-        </div>
-        <!-- un success alert -->
+                                </v-snackbar>
+                                
+                            </div>
+                            <!-- un success alert -->
                         </v-form>
                     </v-col>
 
@@ -328,12 +297,13 @@ export default {
             });
         },
         resetValidation () {
-            this.$v.$reset()
             this.name = '';
-            this.email = '';
-            this.mobile = '';
-            this.message = '';
-            this.select = null;
+            this.select = '',
+            this.email = '',
+            this.mobile = '',
+            this.message = '',
+            this.$refs.form.resetValidation()
+            this.snackbar = false
         },
     }
 }
