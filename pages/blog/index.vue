@@ -1,5 +1,8 @@
 <template>
-  <h1>Blog</h1>
+    <div>
+        this is blog page
+        <v-button t>read the post</v-button>
+    </div>
 </template>
 
 <script>

@@ -1,5 +1,7 @@
 <template>
-  
+    <div>
+        hello id {{this.$route.params.id}}
+    </div>
 </template>
 
 <script>
