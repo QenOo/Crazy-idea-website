@@ -22,12 +22,13 @@
 
 
         <div class="container">
+            <h2 class="text-center my-16 head-sec-work headingtow--text">{{$t('recentWorks')}}</h2>
             <div class="filter d-flex align-center">
                 <label :class="{ active: selectedCategory === 'All' }">
                     <input type="radio" v-model="selectedCategory" value="All" /> All
                 </label><br />
-                <label :class="{ active: selectedCategory === 'webApp' }">
-                    <input type="radio" v-model="selectedCategory" value="webApp" /> Web Application
+                <label :class="{ active: selectedCategory === 'Web Application' }">
+                    <input type="radio" v-model="selectedCategory" value="Web Application" /> Web Application
                 </label><br />
                 <label :class="{ active: selectedCategory === 'mobileApp' }">
                     <input type="radio" v-model="selectedCategory" value="mobileApp" /> Mobile Application
@@ -127,5 +128,9 @@ export default {
 .filter input {
     visibility: hidden;
     position: absolute;
+}
+
+.head-sec-work {
+    font-size: 30px;
 }
 </style>

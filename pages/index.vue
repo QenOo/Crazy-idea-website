@@ -80,6 +80,112 @@
             </div>
         </div>
 
+        <div class="about-home">
+            <v-container>
+                <div class="mttt">
+
+                    <v-row v-for="item in this.resabout" :key="item.id" class="d-flex align-center d-xs-none">
+                        <v-col cols="12" lg="6" md="6" sm="12" xm="12" class="vedoc">
+
+                            <img src="/story.svg" width="100%" height="100%">
+
+                        </v-col>
+
+                        <v-col cols="12" lg="6" md="6" sm="12" xm="12">
+
+
+
+
+                            <div v-if="$i18n.locale == 'ar'" class="main-content about-company">
+
+                                <h5 class="headingtow--text">
+                                    {{item.title_ar}}
+                                </h5>
+
+                                <p>
+                                    {{item.conent_ar}}
+                                </p>
+
+                            </div>
+
+
+
+
+                            <div v-if="$i18n.locale == 'en'" class="main-content about-company">
+
+                                <h5 class="headingtow--text">
+                                    {{item.title_en}}
+                                </h5>
+
+                                <p>
+                                    {{item.conent_en}}
+                                </p>
+
+                            </div>
+
+                            <div v-if="$i18n.locale == 'fr'" class="main-content about-company">
+
+                                <h5 class="headingtow--text">
+                                    {{item.title_fr}}
+                                </h5>
+
+                                <p>
+                                    {{item.conent_fr}}
+                                </p>
+
+                            </div>
+
+
+                            <div class="row">
+                                <v-btn class="my-2 myBtn" large :href="`https://api.whatsapp.com/send?phone=2${item.contact_us}`" target="_blank"> {{$t('getStarted')}} </v-btn>
+                            </div>
+
+                        </v-col>
+                    </v-row>
+
+                </div>
+            </v-container>
+        </div>
+
+        <!-- app-clintes -->
+        <app-client />
+        <!-- app-clintes -->
+
+        <!-- app-team -->
+        <app-team />
+        <!-- app-team -->
+
+        <!-- works -->
+        <div class="container">
+            <h2 class="text-center my-16 head-sec-work headingtow--text">{{$t('recentWorks')}}</h2>
+            <div class="filter d-flex align-center">
+                <label :class="{ active: selectedCategory === 'All' }">
+                    <input type="radio" v-model="selectedCategory" value="All" /> All
+                </label><br />
+                <label :class="{ active: selectedCategory === 'Web Application' }">
+                    <input type="radio" v-model="selectedCategory" value="Web Application" /> Web Application
+                </label><br />
+                <label :class="{ active: selectedCategory === 'mobileApp' }">
+                    <input type="radio" v-model="selectedCategory" value="mobileApp" /> Mobile Application
+                </label><br />
+                <label :class="{ active: selectedCategory === 'seo' }">
+                    <input type="radio" v-model="selectedCategory" value="seo" /> Seo
+                </label><br />
+            </div>
+            
+            <v-row>
+                <v-col v-for="app in filteredApps" :key="app.id" class="d-flex align-center my-16" cols="12" md="3">
+                    <div class="myApp">
+                        <img :src="$images(app.image, 'org')" />
+                        <h4>{{app.title}}</h4>
+                        <span class="textinfo--text">{{app.category}}</span>
+                    </div>
+                </v-col>
+            </v-row>
+        </div>
+        <!-- works -->
+
+
     </div>
 </template>
 
@@ -87,7 +193,10 @@
 export default {
     name: 'home',
     data: () => ({
-        res: []
+        res: [],
+        resabout: [],
+        myApps: [],
+		selectedCategory: "All",
     }),
     head() {
         return {
@@ -96,6 +205,8 @@ export default {
     },
     mounted() {
         this.fetchSomething();
+        this.fetchSomethingTow();
+        this.fetchSomethingThree();
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);
     },
@@ -104,16 +215,35 @@ export default {
             let url = process.env.moduleUrl + 'slider';
             const res = await this.$axios.$get(url);
             this.res = res.payload.data;
-        }
-    }
+        },
+        async fetchSomethingTow () {
+            let url = process.env.moduleUrl + 'about';
+            const res = await this.$axios.$get(url);
+            this.resabout = res.payload.data;
+        },
+        async fetchSomethingThree() {
+            let url = process.env.moduleUrl + 'works';
+            const res = await this.$axios.$get(url);
+            this.myApps = res.payload.data;
+
+        },
+    },
+    computed: {
+        filteredApps: function() {
+            var category = this.selectedCategory;
+			if(category === "All") {
+                return this.myApps;
+			} else {
+                return this.myApps.filter(({id, image, title, category, created_at, updated_at}) => category == this.selectedCategory)
+			}
+		}
+	}
 };
 </script>
 
 
 <style scoped>
-.home {
-    height: 3000px;
-}
+
 .scene {
     position: relative;
 }
@@ -164,15 +294,16 @@ export default {
 
 .main-content h4 {
     font-weight: bolder;
-    color: #ffffff;
     font-size: 35px;
     line-height: 1.5;
     text-shadow: 1px 1px 1px #ddd;
-
 }
 
+.overlay-head .main-content h4,
+.overlay-head .main-content p {
+    color: #ffffff !important;
+}
 .main-content p {
-    color: #ffffff;
     display: inline-block;
     width: 88%;
     margin-top: 30px;
@@ -287,4 +418,56 @@ export default {
     margin: 0;
 }
 
+.about-company h5 {
+    font-size: 29px;
+}
+
+.myBtn {
+    background-image: linear-gradient(to right, #428EF3, #1542D3);
+    color: #ffffff !important;
+    font-size: 15px;
+}
+
+.myApp {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.myApp h4 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.myApp img {
+    width: 240px;
+    height: 200px;
+}
+
+.filter {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.filter label {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.filter label.active {
+    color: #fff;
+    background-color: #4892FF;
+}
+
+.filter input {
+    visibility: hidden;
+    position: absolute;
+}
+
+.head-sec-work {
+    font-size: 30px;
+}
 </style>

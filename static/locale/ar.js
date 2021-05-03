@@ -52,5 +52,6 @@ export default {
     howers: ' عدد ساعات العمل:',
     see: 'عرض المقال',
     interdouceOurProjects: 'نقدم لكم مشاريعنا',
-    growYourBusiness: 'ينمو عملك مع مشاريعنا الخاصة'
+    growYourBusiness: 'ينمو عملك مع مشاريعنا الخاصة',
+    recentWorks: 'اخر الاعمال'
 }

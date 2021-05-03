@@ -52,5 +52,6 @@ export default {
     howers: 'Hours Work : ',
     see: 'Read Post',
     interdouceOurProjects: 'Interdouce our projects',
-    growYourBusiness: 'Grow Your Business With Our Own Projects'
+    growYourBusiness: 'Grow Your Business With Our Own Projects',
+    recentWorks: 'Recent Works'
 }
