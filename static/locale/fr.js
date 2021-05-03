@@ -48,5 +48,7 @@ export default {
     pragContact: 'If you need Website , mobile App , Some Seo or Moshion Graphic ? Talk us we\'ll be happy to hear you',
     hoursWork: 'Saturday -Thursday 9 AM : 5 Pm',
     howers: 'Hours Work : ',
-    see: 'Read Post'
+    see: 'Read Post',
+    interdouceOurProjects: 'Interdouce our projects',
+    growYourBusiness: 'Grow Your Business With Our Own Projects'
 }
