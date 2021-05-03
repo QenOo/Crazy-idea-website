@@ -189,7 +189,6 @@ export default {
 .projects-item .myBtn {
     background-image: linear-gradient(to right, #428EF3, #1542D3);
     color: #ffffff;
-    padding-top: 9px;
     font-size: 15px;
 }
 
@@ -211,42 +210,6 @@ export default {
     font-size: 25px;
     display: inline-block;
     margin-left: 25px;
-}
-
-@keyframes grow {
-
-    0% {
-
-        transform: rotate(0deg);
-        /* transform: scale(0 , 0); */
-    }
-
-    25% {
-
-        transform: rotate(90deg);
-        /* transform: scale(.25 , .25); */
-    }
-
-    50% {
-
-        transform: rotate(180deg);
-        /* transform: scale(.75 , .75); */
-    }
-
-    75% {
-
-        transform: rotate(270deg);
-        /* transform: scale(1 , 1); */
-    }
-
-
-    100% {
-
-        transform: rotate(360deg);
-        /* transform: scale(1.25 , 1.25); */
-    }
-
-
 }
 
 
