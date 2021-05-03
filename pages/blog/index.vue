@@ -74,7 +74,6 @@ export default {
         async fetchSomething() {
             let url = process.env.moduleUrl + 'blogs';
             let image = process.env.imageUrl;
-            console.log(image)
             const res = await this.$axios.$get(url);
             this.res = res.payload.data;
         }
