@@ -84,7 +84,8 @@ export default {
     },
     methods: {
         async fetchSomething() {
-            const res = await this.$axios.$get('http://127.0.0.1:8000/api/module/services')
+            let url = process.env.moduleUrl + 'services';
+            const res = await this.$axios.$get(url);
             this.res = res.payload.data;
         }
     }
