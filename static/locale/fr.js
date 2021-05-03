@@ -47,5 +47,6 @@ export default {
     letsTalk: 'Let\'s Talk',
     pragContact: 'If you need Website , mobile App , Some Seo or Moshion Graphic ? Talk us we\'ll be happy to hear you',
     hoursWork: 'Saturday -Thursday 9 AM : 5 Pm',
-    howers: 'Hours Work : '
+    howers: 'Hours Work : ',
+    see: 'Read Post'
 }
