@@ -6,9 +6,9 @@ export default {
   ssr: false,
 
   env: {
-    baseUrl: process.env.BASE_URL || 'http://127.0.0.1:8000',
-    moduleUrl: process.env.MODULE_URL || 'http://127.0.0.1:8000/api/module/',
-    imageUrl: process.env.IMAGE_URL || 'http://127.0.0.1:8000/storage/'
+    baseUrl: process.env.BASE_URL || 'http://admin.crazyideaco.com/public/',
+    moduleUrl: process.env.MODULE_URL || 'http://admin.crazyideaco.com/public/api/module/',
+    imageUrl: process.env.IMAGE_URL || 'http://admin.crazyideaco.com/public/storage/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
