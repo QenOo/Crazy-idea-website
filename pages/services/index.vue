@@ -62,7 +62,7 @@
                 </v-col>
 
                 <v-col lg="6" md="6" sm="12" class="d-flex justify-md-end justify-center">
-                    <v-img :src="'http://127.0.0.1:8000/storage/'+item.image" max-height="100%" max-width="80%"></v-img>
+                    <v-img :src="'http://admin.crazyideaco.com/public/storage/'+item.image" max-height="100%" max-width="80%"></v-img>
                 </v-col>
             </v-row>
         </v-container>

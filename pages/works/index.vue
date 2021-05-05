@@ -30,11 +30,20 @@
                 <label :class="{ active: selectedCategory === 'Web Application' }">
                     <input type="radio" v-model="selectedCategory" value="Web Application" /> Web Application
                 </label><br />
-                <label :class="{ active: selectedCategory === 'mobileApp' }">
-                    <input type="radio" v-model="selectedCategory" value="mobileApp" /> Mobile Application
+                <label :class="{ active: selectedCategory === 'Mobile Application' }">
+                    <input type="radio" v-model="selectedCategory" value="Mobile Application" /> Mobile Application
                 </label><br />
-                <label :class="{ active: selectedCategory === 'seo' }">
-                    <input type="radio" v-model="selectedCategory" value="seo" /> Seo
+                <label :class="{ active: selectedCategory === 'Digital Marketing' }">
+                    <input type="radio" v-model="selectedCategory" value="Digital Marketing" /> Digital Marketing
+                </label><br />
+                <label :class="{ active: selectedCategory === 'Motion Graphic' }">
+                    <input type="radio" v-model="selectedCategory" value="Motion Graphic" /> Motion Graphic
+                </label><br />
+                <label :class="{ active: selectedCategory === 'Branding' }">
+                    <input type="radio" v-model="selectedCategory" value="Branding" /> Branding
+                </label><br />
+                <label :class="{ active: selectedCategory === 'Seo' }">
+                    <input type="radio" v-model="selectedCategory" value="Seo" /> Seo
                 </label><br />
             </div>
             
