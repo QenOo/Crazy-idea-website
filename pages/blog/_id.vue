@@ -25,7 +25,7 @@
                     <v-img
                         height="100%"
                         width="100%"
-                        :src="`http://admin.crazyideaco.com/public/storage/`+row.image"
+                        :src="`https://admin.crazyideaco.com/public/storage/`+row.image"
                     ></v-img>
                 </div>
                 <div dark class="content" v-if="$i18n.locale == 'ar'">

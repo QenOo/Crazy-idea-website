@@ -275,7 +275,7 @@ export default {
     },
     methods: {
         contact() {
-            let url = 'http://admin.crazyideaco.com/public/api/contacts';
+            let url = 'https://admin.crazyideaco.com/public/api/contacts';
             let data = {
                 name: this.name,
                 company_name: this.select,
