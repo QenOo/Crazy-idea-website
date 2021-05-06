@@ -33,9 +33,9 @@
                 <v-img max-width="30px" src="/flagLang/en.svg"></v-img>
             </v-btn>
 
-            <v-btn @click.prevent.stop="changlang('fr')" fab icon large color="blue">
+            <!-- <v-btn @click.prevent.stop="changlang('fr')" fab icon large color="blue">
                 <v-img max-width="30px" src="/flagLang/france.svg"></v-img>
-            </v-btn>
+            </v-btn> -->
 
         </v-speed-dial>
     </v-card>
