@@ -37,7 +37,7 @@
                             <v-icon> {{ item.icon }} </v-icon>
                         </v-list-item-icon>
                         <v-list-item-title>
-                            {{ item.title }}
+                            {{$t(`${item.title}`)}}
                         </v-list-item-title>
                     </v-list-item>
 
@@ -71,3 +71,14 @@ export default {
     }
 };
 </script>
+
+
+<style>
+.v-navigation-drawer {
+    max-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+</style>
