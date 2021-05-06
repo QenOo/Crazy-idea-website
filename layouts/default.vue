@@ -7,8 +7,6 @@
         <!-- ?==  content -->
         <v-main>
             <nuxt />
-            <v-container>
-            </v-container>
         </v-main>
         <!-- ?==  content -->
 
