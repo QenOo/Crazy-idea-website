@@ -24,7 +24,7 @@
                     <v-col cols="12" lg="6" md="6" sm="12" xm="12" class="vedoc">
 
                         <div class="vedo">
-                            <video poster="/header/crazy_poster.png" style="width: 100%;height: 100%;background: white;position:relative; border-radius: 50px 0 0 0;border:none;outline:none;z-index: 5;" autoplay="" muted="">
+                            <video poster="/header/crazy_poster.png" style="width: 100%;height: 100%;background: white;position:relative; border-radius: 50px 0 0 0;border:none;outline:none;z-index: 4;" autoplay="" muted="">
                                 <source src="/header/vid.mp4">
                             </video>
                         </div>
